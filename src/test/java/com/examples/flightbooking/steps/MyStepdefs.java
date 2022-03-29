@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class MyStepdefs {
 
-
+    boolean isSignedIn = false;
     Response response;
 
     @Given("^the \"([^\"]*)\" is signed in with \"([^\"]*)\" and \"([^\"]*)\" parameters$")
@@ -28,23 +28,24 @@ public class MyStepdefs {
         List<String> names = j.getList("firstName");
         List<String> emails = j.getList("email");
         List<String> passwords = j.getList("password");
-
+        boolean isSignedIn = false;
         for (int i = 0; i< names.size(); i++){
             if(names.get(i).equals(name) && emails.get(i).equals(email) && passwords.get(i).equals(password)){
                 System.out.println("user is signed in !");
+                isSignedIn = true;
                 break;
             }
-            else{
-                System.out.println("user is not signed in !");
-                break;
-            }
+        }
 
+        if(isSignedIn==false) {
+            System.out.println("user is not signed in !");
         }
 
     }
 
     @When("^the user asks metrics from booking table$")
     public void theUserAsksMetricsFromBookingTable() {
+
     }
 
     @Then("^the user view details before confirmation with \"([^\"]*)\"$")
