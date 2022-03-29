@@ -11,6 +11,6 @@ Feature: Booking Details
     When  the user asks metrics from booking table
     Then  the user view details before confirmation with "<date>"
     Examples:
-      |    name    |           email            |    password    |               date                  |
-      |  Mohammad  |    mohammad331@gmail.com   |    mrunix1998  |    Mon, 21 Mar 2022 14:38:08 GMT    |
-      |    Fateme    |    fateme@email.com       |    1111  |    Sat, 19 Mar 2022 14:15:55 GMT    |
+      |    name    |           email            |    password    |     date       |
+      |  Mohammad  |    mohammad331@gmail.com   |    mrunix1998  |   01-14-2022   |
+      |   Fateme   |    fateme@email.com        |       1111     |   01-14-2022   |
