@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "e6856a85-6e66-4309-a429-46c32bd3398e",
+		"name": "flightbooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/airports",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"airports"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "airports",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/airports",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"airports"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 13:59:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"airportId\": 1,\n        \"airportName\": \"Qom\"\n    },\n    {\n        \"airportId\": 2,\n        \"airportName\": \"Tex\"\n    },\n    {\n        \"airportId\": 3,\n        \"airportName\": \"USA\"\n    },\n    {\n        \"airportId\": 4,\n        \"airportName\": \"UK\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "airlines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/airlines",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"airlines"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "airlines",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/airlines",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"airlines"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 14:49:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"airlineId\": 1,\n        \"airlineName\": \"IranAir\"\n    },\n    {\n        \"airlineId\": 2,\n        \"airlineName\": \"KishAir\"\n    },\n    {\n        \"airlineId\": 3,\n        \"airlineName\": \"Pars\"\n    },\n    {\n        \"airlineId\": 4,\n        \"airlineName\": \"Aseman\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "reservations of a person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/rsvps/customer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"rsvps",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "reservations of a person",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/rsvps/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"rsvps",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 14:08:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"rsvpId\": 1,\n        \"rsvpDate\": \"01-14-2022 15:20:23\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"rsvpId\": 2,\n        \"rsvpDate\": \"01-14-2022 15:20:23\",\n        \"status\": \"ACTIVE\"\n    },\n    {\n        \"rsvpId\": 3,\n        \"rsvpDate\": \"01-14-2022 15:20:23\",\n        \"status\": \"CANCELLED\"\n    },\n    {\n        \"rsvpId\": 4,\n        \"rsvpDate\": \"01-14-2022 15:20:23\",\n        \"status\": \"CANCELLED\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "flights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/flights",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"flights"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "flights",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/flights",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"flights"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 14:51:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"flightId\": 1,\n        \"flightCode\": \"1FF1\",\n        \"source\": {\n            \"sourceId\": 1,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 1,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 1,\n            \"airplaneName\": \"D107\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"IranAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 45.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 2,\n        \"flightCode\": \"2FF2\",\n        \"source\": {\n            \"sourceId\": 2,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 2,\n            \"arrivalDateTime\": \"01-15-2021 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 5,\n            \"airplaneName\": \"J130\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 50.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 3,\n        \"flightCode\": \"3FF3\",\n        \"source\": {\n            \"sourceId\": 3,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 3,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 9,\n            \"airplaneName\": \"S133\",\n            \"airline\": {\n                \"airlineId\": 3,\n                \"airlineName\": \"Pars\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 45.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 4,\n        \"flightCode\": \"4FF4\",\n        \"source\": {\n            \"sourceId\": 4,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 4,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 13,\n            \"airplaneName\": \"U135\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 50.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 5,\n        \"flightCode\": \"5FF5\",\n        \"source\": {\n            \"sourceId\": 5,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 5,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 2,\n            \"airplaneName\": \"D235\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"IranAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 55.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 6,\n        \"flightCode\": \"6FF6\",\n        \"source\": {\n            \"sourceId\": 6,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 6,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 6,\n            \"airplaneName\": \"J238\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 57.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 7,\n        \"flightCode\": \"7FF7\",\n        \"source\": {\n            \"sourceId\": 7,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 7,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 10,\n            \"airplaneName\": \"S236\",\n            \"airline\": {\n                \"airlineId\": 3,\n                \"airlineName\": \"Pars\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 58.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 8,\n        \"flightCode\": \"8FF8\",\n        \"source\": {\n            \"sourceId\": 8,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 8,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 14,\n            \"airplaneName\": \"U238\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 54.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 9,\n        \"flightCode\": \"9FF9\",\n        \"source\": {\n            \"sourceId\": 9,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 9,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 3,\n            \"airplaneName\": \"D380\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"IranAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 68.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 10,\n        \"flightCode\": \"10FF\",\n        \"source\": {\n            \"sourceId\": 10,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 10,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 7,\n            \"airplaneName\": \"J395\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 69.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 11,\n        \"flightCode\": \"11FF\",\n        \"source\": {\n            \"sourceId\": 11,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 11,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 11,\n            \"airplaneName\": \"S390\",\n            \"airline\": {\n                \"airlineId\": 3,\n                \"airlineName\": \"Pars\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 67.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 12,\n        \"flightCode\": \"12FF\",\n        \"source\": {\n            \"sourceId\": 12,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 12,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 15,\n            \"airplaneName\": \"U387\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 68.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 13,\n        \"flightCode\": \"13FF\",\n        \"source\": {\n            \"sourceId\": 13,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 13,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 4,\n            \"airplaneName\": \"D710\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"IranAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 90,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 14,\n        \"flightCode\": \"14FF\",\n        \"source\": {\n            \"sourceId\": 14,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 14,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 8,\n            \"airplaneName\": \"J725\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 94.25,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 15,\n        \"flightCode\": \"15FF\",\n        \"source\": {\n            \"sourceId\": 15,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 15,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 12,\n            \"airplaneName\": \"S720\",\n            \"airline\": {\n                \"airlineId\": 3,\n                \"airlineName\": \"Pars\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 93.99,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 16,\n        \"flightCode\": \"16FF\",\n        \"source\": {\n            \"sourceId\": 16,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 16,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 16,\n            \"airplaneName\": \"U718\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 91.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get flight by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "get flight by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/public/flight/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"flight",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Mar 2022 23:17:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"flightId\": 1,\n    \"flightCode\": \"1FF1\",\n    \"source\": {\n        \"sourceId\": 1,\n        \"departureDateTime\": \"01-14-2022 11:30:34\",\n        \"airport\": {\n            \"airportId\": 1,\n            \"airportName\": \"Qom\"\n        }\n    },\n    \"destination\": {\n        \"destinationId\": 1,\n        \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n        \"airport\": {\n            \"airportId\": 2,\n            \"airportName\": \"Tex\"\n        }\n    },\n    \"airplane\": {\n        \"airplaneId\": 1,\n        \"airplaneName\": \"D107\",\n        \"airline\": {\n            \"airlineId\": 1,\n            \"airlineName\": \"IranAir\"\n        }\n    },\n    \"availableSeat\": 10,\n    \"fare\": 45.5,\n    \"capacity\": 10,\n    \"status\": \"ON_TIME\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get flights by fare",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/flights/fare/50",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"flights",
+						"fare",
+						"50"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get flights by fare",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/flights/fare/50",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"flights",
+								"fare",
+								"50"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 14:37:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"flightId\": 1,\n        \"flightCode\": \"1FF1\",\n        \"source\": {\n            \"sourceId\": 1,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 1,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 1,\n            \"airplaneName\": \"D107\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"Delta\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 45.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 3,\n        \"flightCode\": \"3FF3\",\n        \"source\": {\n            \"sourceId\": 3,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 3,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 9,\n            \"airplaneName\": \"S133\",\n            \"airline\": {\n                \"airlineId\": 3,\n                \"airlineName\": \"Spirit\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 45.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get flights by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/flights/01-15-2022",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"flights",
+						"01-15-2022"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get flights by date (after date 01-15-2022)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/flights/01-15-2022",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"flights",
+								"01-15-2022"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 14:57:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"flightId\": 2,\n        \"flightCode\": \"2FF2\",\n        \"source\": {\n            \"sourceId\": 2,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 2,\n            \"arrivalDateTime\": \"01-15-2021 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 5,\n            \"airplaneName\": \"J130\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 50.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 4,\n        \"flightCode\": \"4FF4\",\n        \"source\": {\n            \"sourceId\": 4,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 4,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 13,\n            \"airplaneName\": \"U135\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 50.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 6,\n        \"flightCode\": \"6FF6\",\n        \"source\": {\n            \"sourceId\": 6,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 6,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 6,\n            \"airplaneName\": \"J238\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 57.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 8,\n        \"flightCode\": \"8FF8\",\n        \"source\": {\n            \"sourceId\": 8,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 8,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 14,\n            \"airplaneName\": \"U238\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 54.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 10,\n        \"flightCode\": \"10FF\",\n        \"source\": {\n            \"sourceId\": 10,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 10,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 7,\n            \"airplaneName\": \"J395\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 69.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 12,\n        \"flightCode\": \"12FF\",\n        \"source\": {\n            \"sourceId\": 12,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 12,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 15,\n            \"airplaneName\": \"U387\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 68.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 14,\n        \"flightCode\": \"14FF\",\n        \"source\": {\n            \"sourceId\": 14,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 14,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 3,\n                \"airportName\": \"USA\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 8,\n            \"airplaneName\": \"J725\",\n            \"airline\": {\n                \"airlineId\": 2,\n                \"airlineName\": \"KishAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 94.25,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    },\n    {\n        \"flightId\": 16,\n        \"flightCode\": \"16FF\",\n        \"source\": {\n            \"sourceId\": 16,\n            \"departureDateTime\": \"01-15-2022 09:30:34\",\n            \"airport\": {\n                \"airportId\": 4,\n                \"airportName\": \"UK\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 16,\n            \"arrivalDateTime\": \"01-15-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 16,\n            \"airplaneName\": \"U718\",\n            \"airline\": {\n                \"airlineId\": 4,\n                \"airlineName\": \"Aseman\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 91.75,\n        \"capacity\": 5,\n        \"status\": \"ON_TIME\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get flights by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/api/public/flights/source/1/destination/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"public",
+						"flights",
+						"source",
+						"1",
+						"destination",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get flights by city",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/flights/source/1/destination/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"flights",
+								"source",
+								"1",
+								"destination",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 16:25:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"flightId\": 1,\n        \"flightCode\": \"1FF1\",\n        \"source\": {\n            \"sourceId\": 1,\n            \"departureDateTime\": \"01-14-2022 11:30:34\",\n            \"airport\": {\n                \"airportId\": 1,\n                \"airportName\": \"Qom\"\n            }\n        },\n        \"destination\": {\n            \"destinationId\": 1,\n            \"arrivalDateTime\": \"01-14-2022 13:35:56\",\n            \"airport\": {\n                \"airportId\": 2,\n                \"airportName\": \"Tex\"\n            }\n        },\n        \"airplane\": {\n            \"airplaneId\": 1,\n            \"airplaneName\": \"D107\",\n            \"airline\": {\n                \"airlineId\": 1,\n                \"airlineName\": \"IranAir\"\n            }\n        },\n        \"availableSeat\": null,\n        \"fare\": 45.5,\n        \"capacity\": 10,\n        \"status\": \"ON_TIME\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "customers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/public/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"public",
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 29 Mar 2022 09:32:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"customerId\": 1,\n        \"firstName\": \"Fateme\",\n        \"lastName\": \"Rezaeian\",\n        \"email\": \"fateme@email.com\",\n        \"password\": \"1111\"\n    },\n    {\n        \"customerId\": 2,\n        \"firstName\": \"Mohammad\",\n        \"lastName\": \"Salehi\",\n        \"email\": \"h.mammad@email.com\",\n        \"password\": \"1111\"\n    },\n    {\n        \"customerId\": 3,\n        \"firstName\": \"Mahdi\",\n        \"lastName\": \"Kaveh\",\n        \"email\": \"kaveh@email.com\",\n        \"password\": \"1111\"\n    },\n    {\n        \"customerId\": 4,\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"email\": \"john@email.com\",\n        \"password\": \"1111\"\n    },\n    {\n        \"customerId\": 5,\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Doe\",\n        \"email\": \"jane@email.com\",\n        \"password\": \"1111\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get customer by email",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
