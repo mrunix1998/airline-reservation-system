@@ -10,7 +10,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.hamidur</groupId>
+	<groupId>com.flight</groupId>
 	<artifactId>SpringBootRESTfulWebservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBootRESTfulWebservices</name>

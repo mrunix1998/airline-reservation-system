@@ -82,7 +82,11 @@ public class BookingDetailsStep {
                     array.put(item);
                 }
             }
-            System.out.println(array.toString());
+
+            for(int i = 0 ; i<array.length() ; i++){
+                System.out.println(array.getJSONObject(i));
+
+            }
 
         }
         else{

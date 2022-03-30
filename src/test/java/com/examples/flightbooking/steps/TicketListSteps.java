@@ -92,13 +92,18 @@ public class TicketListSteps {
                     item.put("departureDate", dates.get(i));
                     item.put("sourceAirPort", sourceAirPorts.get(i));
                     item.put("destAirPort", destAirPorts.get(i));
-                    item.put("fare", fare.get(i));
                     item.put("capacity", capacity.get(i));
                     item.put("status", stats.get(i));
+                    item.put("fare", fare.get(i));
+
                     array.put(item);
                 }
             }
-            System.out.println(array.toString());
+            for(int i = 0 ; i<array.length() ; i++){
+                System.out.println(array.getJSONObject(i));
+
+            }
+
 
         }
 

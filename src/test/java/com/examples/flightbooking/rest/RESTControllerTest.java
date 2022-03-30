@@ -21,6 +21,8 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 /** 
@@ -47,6 +49,7 @@ public class RESTControllerTest {
 
     Set<Customer> mockCustomers = new LinkedHashSet<>();
     Set<Flight> mockFlights = new LinkedHashSet<>();
+    Set<Flight> mockFlightsByCity = new LinkedHashSet<>();
 
 
     Customer c1 = new Customer(1,"Fateme", "Rezaeian", "fateme@email.com", "1111");
@@ -63,6 +66,8 @@ public class RESTControllerTest {
 
         mockFlights.add(f1);
         mockFlights.add(f2);
+
+        mockFlightsByCity.add(f2);
     }
 
     @Before
@@ -72,8 +77,6 @@ public class RESTControllerTest {
     @After
     public void after() throws Exception {
     }
-
-
 
     /**
     *
@@ -116,44 +119,21 @@ public class RESTControllerTest {
 
     /**
     *
-    * Method: get(@PathVariable Integer flightId)
-    *
-    */
-    @Test
-    public void testGet() throws Exception {
-    //TODO: Test goes here...
-    }
-
-
-    /**
-    *
-    * Method: getFlightsByDate(@PathVariable String date)
-    *
-    */
-    @Test
-    public void testGetFlightsByDate() throws Exception {
-    //TODO: Test goes here...
-    }
-
-
-    /**
-    *
     * Method: getFlightsByCity(@PathVariable Integer sourceId, @PathVariable Integer destinationId)
     *
     */
     @Test
     public void testGetFlightsByCity() throws Exception {
     //TODO: Test goes here...
-    }
 
-    /**
-    *
-    * Method: getAllRSVPsByCustomerId(@PathVariable Integer customerId)
-    *
-    */
-    @Test
-    public void testGetAllRSVPsByCustomerId() throws Exception {
-    //TODO: Test goes here...
+        Mockito.when(flightService.getFlightsByCity(Mockito.anyInt(), Mockito.anyInt())).thenReturn(mockFlightsByCity);
+
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
+                "http://localhost:8082/api/public/flights/source/1/destination/1").accept(MediaType.APPLICATION_JSON);
+
+        MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+        System.out.println(result.getResponse().getContentAsString().toString());
+        Assert.assertEquals(result.getResponse().getStatus(), 200);
     }
 
 } 
