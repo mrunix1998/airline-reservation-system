@@ -1,24 +1,17 @@
 package com.examples.flightbooking.steps;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
-import java.util.Date;
 import java.util.List;
-
 import static io.restassured.RestAssured.given;
 
-public class MyStepdefs {
+public class BookingDetailsStep {
 
     boolean isSignedIn = false;
     Response response;
@@ -26,8 +19,7 @@ public class MyStepdefs {
 
     @Given("^the \"([^\"]*)\" is signed in with \"([^\"]*)\" and \"([^\"]*)\" parameters$")
     public void theIsSignedInWithAndParameters(String name, String email, String password) {
-        // Write code here that turns the phrase above into concrete actions
-        String urlToRead = "http://localhost:8082/api/public/customers";
+
         response = given().contentType("application/json").get("http://localhost:8082/api/public/customers");
 
         //convert JSON to string
