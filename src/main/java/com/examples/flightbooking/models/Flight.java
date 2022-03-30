@@ -16,6 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
@@ -57,6 +58,48 @@ public class Flight
     private Set<Customer> customers;
 
     public Flight() {}
+    public Flight(Integer flightId, String flightCode, Integer sourceId, Integer destinationId, Integer airplaneId, Float fare, Integer capacity, String status) {
+        this.flightId = flightId;
+        this.flightCode = flightCode;
+
+        Airplane ai = new Airplane();
+        ai.setAirplaneId(1);
+        this.airplane = ai;
+
+        Source s = new Source();
+        s.setSourceId(sourceId);
+        s.setDepartureDateTime(LocalDateTime.now());
+        Airport ap = new Airport();
+        ap.setAirportId(1);
+        ap.setAirportName("emam");
+        s.setAirport(ap);
+        this.source = s;
+
+        Destination d = new Destination();
+        d.setArrivalDateTime(LocalDateTime.now());
+        d.setDestinationId(destinationId);
+        d.setAirport(ap);
+        this.destination = d;
+
+        Airplane a = new Airplane();
+        a.setAirplaneId(airplaneId);
+        this.airplane = a;
+        this.fare = fare;
+        this.capacity = capacity;
+
+        switch (status) {
+            case "ACTIVE":
+                this.status = Status.ACTIVE;
+                break;
+            case "CANCELLED":
+                this.status = Status.CANCELLED;
+                break;
+            case "ON_TIME":
+                this.status = Status.ON_TIME;
+                break;
+        }
+
+    }
 
     public Integer getFlightId() {
         return flightId;
