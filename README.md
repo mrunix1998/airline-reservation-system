@@ -3,7 +3,7 @@
 <p>This project demonstrate the ability of using and working with Spring Data JPA, REST API, complex Hibernate mapping, 
 and in memory database usage for quick test and development.</p>
 
-<p><strong><u>Goal:</u></strong> A complete <strong>Spring Boot RESTful Webservices</strong> project. Built on in memory database so very easy to test. To explore and test endpoints just clone and run the application.</p>
+<p><strong><u>Goal:</u></strong> A <strong>Spring Boot RESTful Webservices</strong> project. Built on in memory database so very easy to test. It contains BDD test and junit test</p>
 
 <strong>
 <u>Tools used:</u>
@@ -14,6 +14,8 @@ and in memory database usage for quick test and development.</p>
     <li>Jackson</li>
     <li>MySQL (in memory database)</li>
     <li>Maven</li>
+    <li>Cucumber</li>
+    <li>Junit</li>
 </ul>
 
 <strong>
