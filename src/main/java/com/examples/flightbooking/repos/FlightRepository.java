@@ -26,7 +26,7 @@ public interface FlightRepository extends CrudRepository<Flight, Integer>
                     " on s.source_id = f.source_id and s.date_time >= :date_time", nativeQuery = true)
     Set<Flight> findByDate(@Param("date_time") LocalDateTime dateTime);
 
-    // native query - MySQL
+    // Hibernate query - MySQL
     @Query(value = "select f from Flight f where f.source.sourceId = :sourceId and f.destination.destinationId = :destinationId")
     Set<Flight> findFlightsByCity(@Param("sourceId") Integer sourceId, @Param("destinationId") Integer destinationId);
 

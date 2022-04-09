@@ -7,8 +7,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.testng.Assert;
+
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 
 public class BookingDetailsStep {
@@ -20,11 +25,18 @@ public class BookingDetailsStep {
     @Given("^the \"([^\"]*)\" is signed in with \"([^\"]*)\" and \"([^\"]*)\" parameters$")
     public void theIsSignedInWithAndParameters(String name, String email, String password) {
 
-        response = given().contentType("application/json").get("http://localhost:8082/api/public/customers");
+        Map<String, Object> request_body = new HashMap<>();
+        request_body.put("email", email);
+        request_body.put("password", password);
+        response = given().contentType("application/json").body(request_body).
+                post("http://localhost:8082/api/public/customer/login");
+        Assert.assertEquals(response.statusCode(), 200);
+        System.out.println(String.format("TestCase status code: %s", response.statusCode()));
 
+
+        response = given().contentType("application/json").get("http://localhost:8082/api/public/customers");
         //convert JSON to string
         JsonPath j = new JsonPath(response.asString());
-
         //get values of JSON array after getting array size
         List<Integer> ids = j.getList("customerId");
         List<String> names = j.getList("firstName");

@@ -28,6 +28,11 @@ public class Util
     public static final String DEPARTURE_DATE_TIME_JKEY = "departureDateTime";
     public static final String ARRIVAL_DATE_TIME_JKEY = "arrivalDateTime";
 
+    public static final String CUSTOMER_FIRSTNAME_JKEY = "first_name";
+    public static final String CUSTOMER_LASTNAME_JKEY = "last_name";
+    public static final String CUSTOMER_EMAIL_JKEY = "email";
+    public static final String CUSTOMER_PASS_JKEY = "password";
+
     public static boolean verifyRSVPByCustomerId(final Map<String, Object> json) throws InvalidRequestException
     {
         if(json.size() != 2) throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request must have 2 values, found="+json.size());
@@ -39,6 +44,44 @@ public class Util
         if(json.getOrDefault(FLIGHT_ID_JKEY, -1).equals(-1))
         {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+FLIGHT_ID_JKEY);
+        }
+        return true;
+    }
+
+    public static boolean verifyCustomer(final Map<String, Object> json) throws InvalidRequestException
+    {
+        if(json.size() != 4) throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request must have 4 values, found="+json.size());
+
+        if(json.getOrDefault(CUSTOMER_FIRSTNAME_JKEY, "first_name").equals("first_name"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_FIRSTNAME_JKEY);
+        }
+        if(json.getOrDefault(CUSTOMER_LASTNAME_JKEY, "last_name").equals("last_name"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_LASTNAME_JKEY);
+        }
+        if(json.getOrDefault(CUSTOMER_EMAIL_JKEY, "email").equals("email"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_EMAIL_JKEY);
+        }
+        if(json.getOrDefault(CUSTOMER_PASS_JKEY, "password").equals("password"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_PASS_JKEY);
+        }
+        return true;
+    }
+
+    public static boolean verifyLogin(final Map<String, Object> json) throws InvalidRequestException
+    {
+        if(json.size() != 2) throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request must have 2 values, found="+json.size());
+
+        if(json.getOrDefault(CUSTOMER_EMAIL_JKEY, "email").equals("email"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_EMAIL_JKEY);
+        }
+        if(json.getOrDefault(CUSTOMER_PASS_JKEY, "password").equals("password"))
+        {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST.value(), "request body missing key="+CUSTOMER_PASS_JKEY);
         }
         return true;
     }

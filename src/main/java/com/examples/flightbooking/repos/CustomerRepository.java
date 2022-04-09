@@ -20,4 +20,11 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer>
                     "delete from reservations r where r.customer_id = :c_id ; " +
                     "delete from customers where customer_id = :c_id", nativeQuery = true)
     void deleteCustomerByCustomerId(@Param("c_id") Integer customerId);
+
+    @Modifying
+    @Transactional
+    @Query(value = "INSERT INTO customers c1 (first_name,last_name,email,password) " +
+                   "VALUES (:first_name, :last_name, :email, :password);", nativeQuery = true)
+    void signup(@Param("first_name") String first_name, @Param("last_name") String last_name,
+                @Param("email") String email, @Param("password") String password);
 }
