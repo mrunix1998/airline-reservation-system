@@ -12,5 +12,5 @@ Feature: Booking Details
     Then  the user view details before confirmation with "<date>"
     Examples:
       |    name    |           email            |    password    |     date       |
-      |  Mohammad  |    mohammad331@gmail.com   |    mrunix1998  |   01-14-2022   |
+      |  Mohammad  |    h.mammad@email.com      |       1111     |   01-14-2022   |
       |   Fateme   |    fateme@email.com        |       1111     |   01-14-2022   |
