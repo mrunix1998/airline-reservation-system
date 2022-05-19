@@ -167,6 +167,13 @@ public class RESTController
         return new ResponseEntity<>(isAuthorized, HttpStatus.UNAUTHORIZED);
     }
 
+    @GetMapping(value = "/customer/logout",  produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> logout()
+    {
+        isAuthorized = false;
+        return new ResponseEntity<>(true, HttpStatus.OK);
+    }
+
     @GetMapping(value = "/flights", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Set<Flight>> getFlights()
     {
