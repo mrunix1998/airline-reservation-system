@@ -62,9 +62,17 @@ public class TicketListSteps {
     public void theUserAsksMetricsFromFlightsTable(String flightId) throws Throwable {
         if(isSignedIn){
 
-            response = given().contentType(ContentType.JSON).
-                    get(String.format("http://localhost:8082/api/public/flight/%s", flightId));
-            response.prettyPrint();
+            try {
+                response = given().contentType(ContentType.JSON).
+                        get(String.format("http://localhost:8082/api/public/flight/%s", flightId));
+                response.prettyPrint();
+                assert true;
+            }
+            catch (Exception e){
+                assert false;
+            }
+
+
         }
         else{
             System.out.println("Authorization Faild!");

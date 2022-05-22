@@ -61,11 +61,16 @@ public class BookingDetailsStep {
     public void theUserAsksMetricsFromBookingTable() {
 
         if(isSignedIn){
-            String uid = Integer.toString(userId);
-            response = given().contentType(ContentType.JSON).
-                    get(String.format("http://localhost:8082/api/public/rsvps/customer/%s", uid));
-            response.prettyPrint();
-
+            try {
+                String uid = Integer.toString(userId);
+                response = given().contentType(ContentType.JSON).
+                        get(String.format("http://localhost:8082/api/public/rsvps/customer/%s", uid));
+                response.prettyPrint();
+                assert true;
+            }
+            catch (Exception e){
+                assert false;
+            }
         }
         else{
             System.out.println("Authorization Faild!");
