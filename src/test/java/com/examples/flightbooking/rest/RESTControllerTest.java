@@ -184,9 +184,5 @@ public class RESTControllerTest {
         String expected = f_stub.get_flight_by_city();
         Assert.assertEquals(result, expected);
     }
-
-
-
-
 }
 
