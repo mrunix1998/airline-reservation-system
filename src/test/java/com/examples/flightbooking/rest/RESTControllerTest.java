@@ -58,6 +58,8 @@ public class RESTControllerTest {
 
     @After
     public void after() throws Exception {
+        System.out.println(("******************************************************" +
+                "*********************************************************************\nafter function"));
     }
 
     @Test
