@@ -186,5 +186,131 @@ public class RESTControllerTest {
         String expected = f_stub.get_flight_by_city();
         Assert.assertEquals(result, expected);
     }
+
+    @Test
+    public final void testAddAirport(){
+
+    }
+
+    @Test
+    public final void testAddRSVPByCustomerId(){
+
+    }
+
+    @Test
+    public final void testCancelFlightById(){
+
+    }
+
+    @Test
+    public final void testCancelRSVPByCustomerId(){
+
+    }
+
+    @Test
+    public final void testDeleteCustomerById(){
+
+    }
+
+    @Test
+    public final void testGet(){
+
+    }
+
+    @Test
+    public final void testGetAirlineByName(){
+
+    }
+
+    @Test
+    public final void testGetAirlines(){
+
+    }
+
+    @Test
+    public final void testGetAirplanes(){
+
+    }
+
+    @Test
+    public final void testGetAirplanesByAirlineName(){
+
+    }
+
+    @Test
+    public final void testGetAirportByName(){
+
+    }
+
+    @Test
+    public final void testGetAirports(){
+
+    }
+
+    @Test
+    public final void testGetAllActiveRSVPsByAirline(){
+
+    }
+
+    @Test
+    public final void testGetAllCancelledRSVPs(){
+
+    }
+
+    public final void testGetAllCancelledRSVPsByAirline(){
+
+    }
+
+    @Test
+    public final void testGetAllRSVPsByCustomerId(){
+
+    }
+
+    @Test
+    public final void testGetCustomerByEmail(){
+
+    }
+
+
+    @Test
+    public final void testGetFlightsByDate(){
+
+    }
+
+    @Test
+    public final void testGetFlightsByFare(){
+
+    }
+
+    @Test
+    public final void testGetFlightsByStatus(){
+
+    }
+
+    @Test
+    public final void testGetFlightsByToday(){
+
+    }
+
+    @Test
+    public final void testInsertFlight(){
+
+    }
+
+
+    @Test
+    public final void testLogout(){
+
+    }
+
+    @Test
+    public final void testRESTController(){
+
+    }
+
+    @Test
+    public final void testSignup(){
+
+    }
 }
 
