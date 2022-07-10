@@ -14,13 +14,28 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
 import static io.restassured.RestAssured.given;
 
 public class BookingDetailsStep {
 
+
     boolean isSignedIn = false;
     Response response;
     Integer userId = -1;
+
+
+    @Before
+    public void beforeScenario(){
+        System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+    }
+
+    @After
+    public void afterScenario(){
+        System.out.println("byeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+    }
 
     @Given("^the \"([^\"]*)\" is signed in with \"([^\"]*)\" and \"([^\"]*)\" parameters$")
     public void theIsSignedInWithAndParameters(String name, String email, String password) {
