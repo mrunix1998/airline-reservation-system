@@ -29,12 +29,12 @@ public class BookingDetailsStep {
 
     @Before
     public void beforeScenario(){
-        System.out.println("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+        System.out.println("brfore steps");
     }
 
     @After
     public void afterScenario(){
-        System.out.println("byeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+        System.out.println("after steps");
     }
 
     @Given("^the \"([^\"]*)\" is signed in with \"([^\"]*)\" and \"([^\"]*)\" parameters$")

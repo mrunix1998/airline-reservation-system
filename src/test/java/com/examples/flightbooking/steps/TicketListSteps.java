@@ -122,11 +122,8 @@ public class TicketListSteps {
 
             }
         }
-
         else{
             System.out.println("Authorization Faild!");
         }
-
     }
-
 }
